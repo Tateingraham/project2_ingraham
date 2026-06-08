@@ -4,6 +4,7 @@ source("R/data_prep.R")
 source("R/ui_team_overview.R")
 source("R/ui_player_deep_dive.R")
 source("R/ui_squad_load.R")
+source("R/ui_practitioner_guide.R")
 
 source("R/server_team_overview.R")
 source("R/server_player_deep_dive.R")
@@ -37,10 +38,9 @@ ui <- fluidPage(
 ")),
   
   tabsetPanel(
+    practitioner_guide_ui(),
     team_overview_ui(gps),
-
     player_deep_dive_ui(gps),
-    
     squad_load_ui(gps)
     )
 )
